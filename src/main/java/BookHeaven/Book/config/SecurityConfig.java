@@ -40,7 +40,7 @@ public class SecurityConfig {
                     auth.requestMatchers( "/api/auth/authenticate", "/v3/api-docs/**",
                             "/swagger-ui/**",
                             "/swagger-ui.html").permitAll();
-                    auth.requestMatchers("/api/auth/**").authenticated();
+                    auth.requestMatchers("/api/auth/**","/books/**").authenticated();
                 })
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

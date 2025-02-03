@@ -27,7 +27,7 @@ public class User {
     private String contactNumber;
     private  String role;
     private Boolean active;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Order> orders;
 
 }

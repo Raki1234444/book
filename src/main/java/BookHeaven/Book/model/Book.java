@@ -25,6 +25,5 @@ public class Book {
     private Double price;
     @Column(nullable = false)
     private Integer stock;
-    @Lob
     private String imageUrl;
 }
